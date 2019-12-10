@@ -65,8 +65,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="rfidManipulation.cs" />
-    <Compile Include="aboutUs.xaml.cs">
-      <DependentUpon>aboutUs.xaml</DependentUpon>
+    <Compile Include="AppInfo.xaml.cs">
+      <DependentUpon>AppInfo.xaml</DependentUpon>
     </Compile>
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
@@ -87,7 +87,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="aboutUs.xaml">
+    <Page Include="AppInfo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -121,13 +121,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\cartati.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="cartati_bMG_2.ico" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Assets\about-icon.png" />
+    <Resource Include="Assets\iosmBG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\main.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\home.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\main1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\bgm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\sold.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

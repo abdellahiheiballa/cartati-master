@@ -26,7 +26,7 @@ namespace Cartati
         public Home()
         {
             InitializeComponent();
-            this.Width = 491;
+            this.Width = 1261;
             manipulation.selectTag1();
             manipulation.auth_methode3();
             soldeTextBox.Text = "Your solde is " + manipulation.read_value();
@@ -49,13 +49,14 @@ namespace Cartati
             ThicknessAnimation myThicknessAnimation = new ThicknessAnimation();
             myThicknessAnimation.Duration = TimeSpan.FromSeconds(0.5);
             myThicknessAnimation.FillBehavior = FillBehavior.HoldEnd;
-            myThicknessAnimation.From = new Thickness(491, 236, 0, 0);
-            myThicknessAnimation.To = new Thickness(0, 236, 0, 0);
+            myThicknessAnimation.From = new Thickness(371, 236, 0, 0);
+            myThicknessAnimation.To = new Thickness(371, 236, 0, 0);
             passwordPanel.BeginAnimation(Grid.MarginProperty, myThicknessAnimation);
             soldeRect.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Gainsboro"));
             soldeRect.BeginAnimation(SolidColorBrush.ColorProperty, myColorAnimation);
             passwordRect.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF673AB7"));
             passwordRect.BeginAnimation(SolidColorBrush.ColorProperty, myColorAnimation);
+            passwordPanel.Visibility = Visibility.Visible;
 
 
         }
@@ -66,13 +67,14 @@ namespace Cartati
             ThicknessAnimation myThicknessAnimation = new ThicknessAnimation();
             myThicknessAnimation.Duration = TimeSpan.FromSeconds(0.5);
             myThicknessAnimation.FillBehavior = FillBehavior.HoldEnd;
-            myThicknessAnimation.From = new Thickness(0, 236, 0, 0);
-            myThicknessAnimation.To = new Thickness(491, 236, 0, 0);
+            myThicknessAnimation.From = new Thickness(371, 236, 0, 0);
+            myThicknessAnimation.To = new Thickness(371, 236, 0, 0);
             passwordPanel.BeginAnimation(Grid.MarginProperty, myThicknessAnimation);
             soldeRect.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF673AB7"));
             soldeRect.BeginAnimation(SolidColorBrush.ColorProperty, myColorAnimation);
             passwordRect.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Gainsboro"));
             passwordRect.BeginAnimation(SolidColorBrush.ColorProperty, myColorAnimation);
+            passwordPanel.Visibility = Visibility.Hidden;
         }
 
         private void SoldeRect_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -81,13 +83,14 @@ namespace Cartati
             ThicknessAnimation myThicknessAnimation = new ThicknessAnimation();
             myThicknessAnimation.Duration = TimeSpan.FromSeconds(0.5);
             myThicknessAnimation.FillBehavior = FillBehavior.HoldEnd;
-            myThicknessAnimation.From = new Thickness(0, 236, 0, 0);
-            myThicknessAnimation.To = new Thickness(491, 236, 0, 0);
+            myThicknessAnimation.From = new Thickness(371, 236, 0, 0);
+            myThicknessAnimation.To = new Thickness(371, 236, 0, 0);
             passwordPanel.BeginAnimation(Grid.MarginProperty, myThicknessAnimation);
             soldeRect.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF673AB7"));
             soldeRect.BeginAnimation(SolidColorBrush.ColorProperty, myColorAnimation);
             passwordRect.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Gainsboro"));
             passwordRect.BeginAnimation(SolidColorBrush.ColorProperty, myColorAnimation);
+            passwordPanel.Visibility = Visibility.Hidden;
         }
 
         private void PasswordRect_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
@@ -96,13 +99,14 @@ namespace Cartati
             ThicknessAnimation myThicknessAnimation = new ThicknessAnimation();
             myThicknessAnimation.Duration = TimeSpan.FromSeconds(0.5);
             myThicknessAnimation.FillBehavior = FillBehavior.HoldEnd;
-            myThicknessAnimation.From = new Thickness(491, 236, 0, 0);
-            myThicknessAnimation.To = new Thickness(0, 236, 0, 0);
+            myThicknessAnimation.From = new Thickness(371, 236, 0, 0);
+            myThicknessAnimation.To = new Thickness(371, 236, 0, 0);
             passwordPanel.BeginAnimation(Grid.MarginProperty, myThicknessAnimation);
             soldeRect.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("Gainsboro"));
             soldeRect.BeginAnimation(SolidColorBrush.ColorProperty, myColorAnimation);
             passwordRect.Fill = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FF673AB7"));
             passwordRect.BeginAnimation(SolidColorBrush.ColorProperty, myColorAnimation);
+            passwordPanel.Visibility = Visibility.Visible;
         }
 
         private void Valider_Click(object sender, RoutedEventArgs e)
@@ -159,7 +163,7 @@ namespace Cartati
                             if (debit != 0)
                             {
                             
-                                float final = solde / debit;
+                                float final = solde + debit;
                                 manipulation.write_value(final.ToString());
                                 soldeTextBox.Text = "Your solde is " + manipulation.read_value();
                                 DevisionError.Visibility = Visibility.Hidden;

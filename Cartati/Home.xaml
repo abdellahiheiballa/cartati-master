@@ -6,46 +6,42 @@
         xmlns:local="clr-namespace:Cartati"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="Home" Height="691.199" Width="990.58" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Visibility="Visible" AllowsTransparency="False" MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderThickness="1" Background="White">
+        Title="Home" Height="653" Width="2522" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None" Visibility="Visible" AllowsTransparency="False" MouseLeftButtonDown="Window_MouseLeftButtonDown" BorderThickness="1" Background="White">
     <Grid>
-        <Grid Name="HeaderPanel" HorizontalAlignment="Left" Height="236" VerticalAlignment="Top" Width="491">
-            <Button Name="closeButton" Content="X" HorizontalAlignment="Left" Margin="441,0,0,0" VerticalAlignment="Top" Width="50" Foreground="#FF673AB7" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="22" RenderTransformOrigin="1.981,-0.737" Click="CloseButton_Click" />
-            <Rectangle Name="soldeRect" Fill="#FF673AB7" HorizontalAlignment="Left" Height="8" VerticalAlignment="Top" Width="100" Margin="134,10,0,0" MouseLeftButtonDown="SoldeRect_MouseLeftButtonDown"/>
-            <Rectangle Name="passwordRect" Fill="Gainsboro" HorizontalAlignment="Left" Height="8" VerticalAlignment="Top" Width="100" Margin="234,10,0,0" MouseLeftButtonDown="PasswordRect_MouseLeftButtonDown" />
-            <Image HorizontalAlignment="Left" Height="170" Margin="152,56,0,0" VerticalAlignment="Top" Width="198">
-                <Image.Source>
-                    <BitmapImage UriSource="C:/Users/abouf/Documents/cartati.png"/>
-                </Image.Source>
-                <Image.OpacityMask>
-                    <ImageBrush ImageSource="Assets/cartati.png"/>
-                </Image.OpacityMask>
-            </Image>
-            <Button x:Name="aboutUsButton" Content="" HorizontalAlignment="Left" Margin="432,10,0,0" VerticalAlignment="Top" Width="19" BorderBrush="{x:Null}" Height="20" Foreground="{x:Null}" Click="AboutUsButton_Click">
-                <Button.Background>
-                    <ImageBrush ImageSource="Assets/about-icon.png"/>
-                </Button.Background>
-            </Button>
+        <Image  HorizontalAlignment="Left" Height="665" VerticalAlignment="Top" Width="1257" Margin="0,60,0,-74">
+            <Image.Source>
+                <BitmapImage UriSource="C:\Users\abdel\source\repos\cartati-master\Cartati\Assets\sold.png"/>
+            </Image.Source>
+
+        </Image>
+        <Grid Name="HeaderPanel" HorizontalAlignment="Left" Height="236" VerticalAlignment="Top" Width="1261">
+            <Button Name="closeButton" Content="close" Margin="1134,14,15,187" Foreground="#FFF1F1F1"  FontSize="22" RenderTransformOrigin="1.981,-0.737" BorderBrush="{x:Null}" Background="#FFFD0000" FontWeight="Bold" Click="CloseButton_Click" />
+
+            <Rectangle Name="soldeRect" Fill="#FFEA435A" HorizontalAlignment="Left" Height="10" VerticalAlignment="Top" Width="9" Margin="499,477,0,-251" MouseLeftButtonDown="SoldeRect_MouseLeftButtonDown"/>
+            <Rectangle Name="passwordRect" Fill="Gainsboro" HorizontalAlignment="Left" Height="9" VerticalAlignment="Top" Width="8" Margin="542,477,0,-250" MouseLeftButtonDown="PasswordRect_MouseLeftButtonDown" />
+            <Button x:Name="aboutUsButton" Content="about Us" HorizontalAlignment="Right" Margin="0,13,138,0" VerticalAlignment="Top" Width="114" BorderBrush="{x:Null}" Height="36" Click="AboutUsButton_Click" Foreground="White" Background="#FF5D73FF" FontWeight="Bold"/>
         </Grid>
 
-        <Grid Name="soldePanel" HorizontalAlignment="Left" Height="467" VerticalAlignment="Top" Width="491" Margin="0,223,0,-0.4">
-            <TextBox Name="newSoldeTextBox" HorizontalAlignment="Left" Height="36" Margin="124,23,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="New Solde" VerticalAlignment="Top" Width="243" FontSize="14" FontFamily="Segoe UI Semibold"/>
-            <TextBox Name="creditTextBox" HorizontalAlignment="Left" Height="36" Margin="124,92,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Credit" VerticalAlignment="Top" Width="243" FontSize="14" FontFamily="Segoe UI Semibold"/>
-            <TextBox Name="debitTextBox" HorizontalAlignment="Left" Height="36" Margin="124,172,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Debit" VerticalAlignment="Top" Width="243" FontSize="14" FontFamily="Segoe UI Semibold"/>
-            <TextBox Name="soldeTextBox" HorizontalAlignment="Left" Height="36" Margin="124,256,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Solde" VerticalAlignment="Top" Width="243" FontSize="14" FontFamily="Segoe UI Semibold" IsEnabled="False"/>
-            <Button x:Name="Valider" Content="Valider" HorizontalAlignment="Left" Margin="123,327,0,0" VerticalAlignment="Top" Width="103" Background="White" Foreground="#FF673AB7" Click="Valider_Click"/>
-            <Button Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="251,327,0,0" VerticalAlignment="Top" Width="115" BorderBrush="White" Click="CancelButton_Click"/>
-            <Button Name="changePasswordButton"  Content="Change password" HorizontalAlignment="Left" Margin="159,384,0,0" VerticalAlignment="Top" Width="165" Foreground="#FF673AB7" Background="{x:Null}" BorderBrush="{x:Null}" Click="ChangePasswordButton_Click" />
-            <TextBlock x:Name="ErrorTextBlock" HorizontalAlignment="Left" Margin="141,421,0,0" TextWrapping="Wrap" Text="This is a number only field" VerticalAlignment="Top" Foreground="#FFF70707" FontFamily="Segoe UI Semibold" FontSize="16" Height="25" Width="207" Visibility="Hidden"/>
-            <TextBlock x:Name="DevisionError" HorizontalAlignment="Left" Margin="160,421,0,0" TextWrapping="Wrap" Text="You Can't devide per 0" VerticalAlignment="Top" Foreground="#FFF70707" FontFamily="Segoe UI Semibold" FontSize="16" Height="25" Width="207" Visibility="Hidden"/>
+        <Grid Name="soldePanel" HorizontalAlignment="Left" Height="467" VerticalAlignment="Top" Width="1261" Margin="0,223,0,-0.4">
+            <TextBox Name="newSoldeTextBox" HorizontalAlignment="Left" Height="36" Margin="374,77,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Debit" VerticalAlignment="Top" Width="299" FontSize="14" FontFamily="Segoe UI Semibold"/>
+            <TextBox Name="creditTextBox" HorizontalAlignment="Left" Height="36" Margin="374,122,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Credit" VerticalAlignment="Top" Width="299" FontSize="14" FontFamily="Segoe UI Semibold"/>
+            <TextBox Name="debitTextBox" HorizontalAlignment="Left" Height="36" Margin="374,212,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Debit" VerticalAlignment="Top" Width="299" FontSize="14" FontFamily="Segoe UI Semibold" Visibility="Hidden"/>
+            <TextBox Name="soldeTextBox" HorizontalAlignment="Left" Height="36" Margin="374,28,0,0" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Solde" VerticalAlignment="Top" Width="299" FontSize="14" FontFamily="Segoe UI Semibold" IsEnabled="False"/>
+            <Button x:Name="Validate" Content="Valider" HorizontalAlignment="Left" Margin="376,170,0,0" VerticalAlignment="Top" Width="102" Background="#FF272A31" Foreground="#FFC5C8D7" Click="Valider_Click" BorderBrush="#FF17181D" Height="28"/>
+            <Button Name="CancelButton" Content="Cancel" HorizontalAlignment="Left" Margin="571,171,0,0" VerticalAlignment="Top" Width="100" BorderBrush="#FF151518" Click="CancelButton_Click" Background="#FF272A31" Foreground="#FFCACEDA" Height="27"/>
+            <Button Name="changePasswordButton"  Content="Change password" HorizontalAlignment="Left" Margin="399,205,0,0" VerticalAlignment="Top" Width="258" Foreground="#FFCED2DD" Background="{x:Null}" BorderBrush="{x:Null}" Click="ChangePasswordButton_Click" />
+            <TextBlock x:Name="ErrorTextBlock" HorizontalAlignment="Left" Margin="429,11,0,0" TextWrapping="Wrap" Text="This is a number only field" VerticalAlignment="Top" Foreground="#FFF70707" FontFamily="Segoe UI Semibold" FontSize="16" Height="25" Width="207" Visibility="Hidden"/>
+            <TextBlock x:Name="DevisionError" HorizontalAlignment="Left" Margin="438,23,0,0" TextWrapping="Wrap" Text="You Can't devide per 0" VerticalAlignment="Top" Foreground="#FFF70707" FontFamily="Segoe UI Semibold" FontSize="16" Height="25" Width="207" Visibility="Hidden"/>
         </Grid>
-        <Grid Name="passwordPanel"  HorizontalAlignment="Left" Height="454" VerticalAlignment="Top" Width="498" Margin="491,236,-0.2,-0.4" Background="#FF673AB7">
-            <PasswordBox Name="oldPasswordBox"  HorizontalAlignment="Left" Height="36" Margin="132,63,0,0" VerticalAlignment="Top" Width="256" Foreground="White" BorderBrush="#89FFFFFF" FontFamily="Segoe UI Semibold" FontSize="14" materialDesign:HintAssist.Hint="Old password" />
-            <PasswordBox Name="newPasswordBox" HorizontalAlignment="Left" Height="36" Margin="132,126,0,0"  VerticalAlignment="Top" Width="256" Foreground="White" BorderBrush="#89FFFFFF" FontFamily="Segoe UI Semibold" FontSize="14" materialDesign:HintAssist.Hint="New password" />
-            <PasswordBox Name="repeatPasswordBox" HorizontalAlignment="Left" Height="36" Margin="132,196,0,0"  VerticalAlignment="Top" Width="256" Foreground="White" BorderBrush="#89FFFFFF" FontFamily="Segoe UI Semibold" FontSize="14" materialDesign:HintAssist.Hint="Repeat password" />
-            <Button x:Name="ValidePasswordButton" Content="Valider" HorizontalAlignment="Left" Margin="181,288,0,0" VerticalAlignment="Top" Width="142"  BorderBrush="White" BorderThickness="2" ClipToBounds="True" Click="ValidePasswordButton_Click"/>
-            <Button Name ="backButton" Content="Back" HorizontalAlignment="Left" Height="38" Margin="27,384,0,0" VerticalAlignment="Top" Width="70" BorderBrush="White" Click="BackButton_Click"/>
-            <TextBlock x:Name="changingPasswordErrorTextBlock" HorizontalAlignment="Left" Margin="154,342,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="16" Foreground="Red" Visibility="Hidden"/>
-            <TextBlock x:Name="SuccessfulyTextBlock" HorizontalAlignment="Left" Margin="132,343,0,0" TextWrapping="Wrap" Text="Password is changed with successfuly" VerticalAlignment="Top" Foreground="#FF06FF00" FontFamily="Segoe UI Semibold" FontSize="16" Visibility="Hidden"/>
+        <Grid Name="passwordPanel"  HorizontalAlignment="Left" Height="190" VerticalAlignment="Top" Width="305" Margin="371,235,0,0" Background="#FFF78E8E" Visibility="Hidden">
+
+            <PasswordBox Name="oldPasswordBox"  HorizontalAlignment="Left" Height="36" Margin="7,13,0,0" VerticalAlignment="Top" Width="295" Foreground="White" BorderBrush="#89FFFFFF" FontFamily="Segoe UI Semibold" FontSize="14" materialDesign:HintAssist.Hint="Old password" />
+            <PasswordBox Name="newPasswordBox" HorizontalAlignment="Left" Height="36" Margin="7,60,0,0"  VerticalAlignment="Top" Width="295" Foreground="White" BorderBrush="#89FFFFFF" FontFamily="Segoe UI Semibold" FontSize="14" materialDesign:HintAssist.Hint="New password" />
+            <PasswordBox Name="repeatPasswordBox" HorizontalAlignment="Left" Height="36" Margin="7,104,0,0"  VerticalAlignment="Top" Width="295" Foreground="White" BorderBrush="#89FFFFFF" FontFamily="Segoe UI Semibold" FontSize="14" materialDesign:HintAssist.Hint="Repeat password" />
+            <Button x:Name="ValidePasswordButton" Content="Validate" HorizontalAlignment="Left" Margin="8,151,0,0" VerticalAlignment="Top" Width="87"  BorderBrush="#FF17181D" BorderThickness="2" ClipToBounds="True" Click="ValidePasswordButton_Click" Height="26" Background="#FF272A31" Foreground="#FFE7E9F0"/>
+            <Button Name ="backButton" Content="Cancel" HorizontalAlignment="Left" Height="26" Margin="202,149,0,0" VerticalAlignment="Top" Width="100" BorderBrush="#FF151518" Click="BackButton_Click" Background="#FF272A31" Foreground="#FFB9BDC9" FontWeight="Bold"/>
+            <TextBlock x:Name="changingPasswordErrorTextBlock" HorizontalAlignment="Left" Margin="112,12,0,0" TextWrapping="Wrap" Text="Text Block" VerticalAlignment="Top" FontFamily="Segoe UI Semibold" FontSize="16" Foreground="Red" Visibility="Hidden"/>
+            <TextBlock x:Name="SuccessfulyTextBlock" HorizontalAlignment="Left" Margin="16,-1,0,0" TextWrapping="Wrap" Text="Password is changed with successfuly" VerticalAlignment="Top" Foreground="#FF06FF00" FontFamily="Segoe UI Semibold" FontSize="16"  Visibility="Hidden"/>
         </Grid>
     </Grid>
 </Window>

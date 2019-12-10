@@ -10,7 +10,7 @@ namespace Cartati
     class rfidManipulation
     {
 
-        public static SerialPort port = new SerialPort("COM11", 19200, Parity.None, 8, StopBits.One);
+        public static SerialPort port = new SerialPort("COM17", 19200, Parity.None, 8, StopBits.One);
         public static sm_mifare_lib.mifare sm132 = new sm_mifare_lib.mifare();
         String[] ports = SerialPort.GetPortNames();
 

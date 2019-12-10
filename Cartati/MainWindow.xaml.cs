@@ -63,7 +63,11 @@ namespace Cartati
             {
                 try
                 {
-                if (Username.Text.CompareTo(manipulation.read_bloc1()) == 0
+                    ///manipulation.write_bloc1("abdo");
+                 ///   manipulation.write_bloc2("abdo");  
+                 ///  manipulation.write_value("2000");
+
+                    if (Username.Text.CompareTo(manipulation.read_bloc1()) == 0
                                                 && Password.Password.CompareTo(manipulation.read_bloc2()) == 0)
                                             {
 
